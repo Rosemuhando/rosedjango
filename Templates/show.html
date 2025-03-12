@@ -8,6 +8,7 @@
 {% for x in all %}
 <div class="card w-30 p-4 shadow-lg ">
 <p class="fw-bold text-primary">{{ x.name }}</p>
+
 <p><strong>Email:</strong>{{ x.email }}</p>
 <p> <strong>Phone:</strong>{{ x.phone }}</p>
 <p> <strong>Date&Time:</strong>{{ x.date}}</p>
@@ -18,7 +19,9 @@
     <a href="{% url 'edit' x.id %}" class="text-warning">
         <i class="bi bi-pencil"></i>Edit
     </a>
-
+    <a href="{% url 'pay' %}" class="text-success">
+                    <i class="bi bi-credit-card"></i>Pay
+                </a>
 
     <a href="/delete/{{ x.id }}" class="me-5 text-success ">
         <i  class="bi bi-trash "></i>Delete
